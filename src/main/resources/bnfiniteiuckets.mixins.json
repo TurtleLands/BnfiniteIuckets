@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.mekb.bnfiniteiuckets.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BucketItemMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
