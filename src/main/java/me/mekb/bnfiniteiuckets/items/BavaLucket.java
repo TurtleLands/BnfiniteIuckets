@@ -1,6 +1,8 @@
 package me.mekb.bnfiniteiuckets.items;
 
+import com.google.gson.JsonObject;
 import me.mekb.bnfiniteiuckets.Items;
+import me.mekb.bnfiniteiuckets.Recipe;
 import me.mekb.bnfiniteiuckets.misc.BavaLucketStorage;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
 import net.minecraft.block.Blocks;
@@ -38,5 +40,12 @@ public class BavaLucket extends BucketItem {
 
             return ActionResult.SUCCESS;
         });
+    }
+
+    public static JsonObject getRecipe(String id) {
+        return Recipe.getRecipe(Recipe.RecipeType.Shaped, new String[][] {
+                { "minecraft:lava_bucket", null, "minecraft:lava_bucket" },
+                {  null, "minecraft:lava_bucket", null },
+        }, id, 1);
     }
 }

@@ -1,10 +1,9 @@
-# Bnfinite Iuckets
-## Buckets containing infinite amounts of fluid, and a void bucket for some reason.
-
-Bnfinite Iuckets is a very small mod, it only adds 3 items, the Bater Wucket, Bava Lucket and the Bmpty Eucket.
+# :bucket: Bnfinite Iuckets
+Bnfinite Iuckets is a very small mod which adds 3 items, the Bater Wucket, Bava Lucket and the Bmpty Eucket.
 
 ### Bater Wucket
 It simply places water without being used, acting like an infinite water source you can hold!
+
 ### Bava Lucket
 It does the same thing as the Bater Wucket, it produces infinite lava.
 

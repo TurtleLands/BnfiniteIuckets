@@ -1,6 +1,8 @@
 package me.mekb.bnfiniteiuckets.items;
 
+import com.google.gson.JsonObject;
 import me.mekb.bnfiniteiuckets.Items;
+import me.mekb.bnfiniteiuckets.Recipe;
 import me.mekb.bnfiniteiuckets.misc.BaterWucketStorage;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
 import net.minecraft.block.Blocks;
@@ -20,6 +22,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BaterWucket extends BucketItem {
     public BaterWucket() {
@@ -44,5 +49,12 @@ public class BaterWucket extends BucketItem {
 
             return ActionResult.SUCCESS;
         });
+    }
+
+    public static JsonObject getRecipe(String id) {
+        return Recipe.getRecipe(Recipe.RecipeType.Shaped, new String[][] {
+            { "minecraft:water_bucket", null, "minecraft:water_bucket" },
+            {  null, "minecraft:water_bucket", null },
+        }, id, 1);
     }
 }
