@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.mekb.bnfiniteiuckets.Main"
+      "me.mekb.bnfiniteiuckets.BnfiniteIuckets"
     ]
   },
   "mixins": [
