@@ -15,11 +15,12 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Rarity;
 import net.minecraft.world.event.GameEvent;
 
 public class BavaLucket extends BucketItem {
     public BavaLucket() {
-        super(Fluids.LAVA, new Settings().maxCount(1));
+        super(Fluids.LAVA, new Settings().maxCount(1).rarity(Rarity.UNCOMMON));
         FluidStorage.ITEM.registerForItems((stack, ctx) -> new BavaLucketStorage(), this);
     }
 

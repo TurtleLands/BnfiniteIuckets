@@ -17,6 +17,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -28,7 +29,7 @@ import java.util.Arrays;
 
 public class BaterWucket extends BucketItem {
     public BaterWucket() {
-        super(Fluids.WATER, new Settings().maxCount(1));
+        super(Fluids.WATER, new Settings().maxCount(1).rarity(Rarity.UNCOMMON));
         FluidStorage.ITEM.registerForItems((stack, ctx) -> new BaterWucketStorage(), this);
     }
 
