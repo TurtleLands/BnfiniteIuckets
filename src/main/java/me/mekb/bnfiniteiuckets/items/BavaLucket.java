@@ -32,7 +32,7 @@ public class BavaLucket extends BucketItem {
         CauldronBehavior.EMPTY_CAULDRON_BEHAVIOR.put(Items.bavaLucket, (state, world, pos, player, hand, stack) -> {
             if (world.isClient) return ActionResult.SUCCESS;
 
-            world.setBlockState(pos, Blocks.LAVA_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 3));
+            world.setBlockState(pos, Blocks.LAVA_CAULDRON.getDefaultState());
             player.incrementStat(Stats.FILL_CAULDRON);
             player.incrementStat(Stats.USED.getOrCreateStat(stack.getItem()));
             world.playSound(null, pos, SoundEvents.ITEM_BUCKET_EMPTY_LAVA, SoundCategory.BLOCKS, 1f, 1f);
